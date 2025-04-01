@@ -13,6 +13,7 @@ body {
   box-sizing: border-box;
 }
 
+
 .top-bar {
   width: 100%;
   height: 40px;
@@ -20,10 +21,12 @@ body {
   border-bottom: 3px solid black;
 }
 
+
 .square-panel {
   position: relative;
   width: 250px;
   height: 250px;
+  background-color: gray;
 }
 
 .rotated-square {
@@ -33,4 +36,40 @@ body {
   background-color: hsl(0, 100%, 50%);
   border: 2px solid black;
   transform: rotate(45deg);
+}
+
+
+.circle-panel {
+  width: 250px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  background-color: pink;
+}
+
+.equal-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  gap: 20px;
+  margin-left: 10px;
+}
+
+.line {
+  width: 80px;
+  height: 6px;
+  background-color: blue;
+  border: 2px solid black;
+}
+
+.circle {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: hsl(180, 100%, 25%);
+  border: 2px solid black;
 }
