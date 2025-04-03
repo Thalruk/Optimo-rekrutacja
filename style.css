@@ -17,43 +17,44 @@ body {
   border: 3px solid black;
 }
 
-/**/
+/*Top Bar*/
 .top-bar {
   width: 100%;
-  height: 40px;
+  height: 50px;
   background-color: rgb(128, 128, 0);
   border-bottom: 3px solid black;
 }
 
+/*Main panel responsible for holding everything in one place*/
 .main-panel {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
 }
 
-/**/
+/*Panel with red rotated squares*/
 .square-panel {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 325px;
+  display: flex;
+  align-items: left;
 }
 
 .rotated-square {
   position: absolute;
-  width: 75px;
-  height: 75px;
+  width: 125px;
+  height: 125px;
   background-color: rgb(255, 0, 0);
   border: 2px solid black;
   transform: rotate(45deg);
 }
 
-/**/
+/*Panel with equation sign and circle*/
 .circle-panel {
-  width: 200px;
-  height: 70px;
+  width: 300px;
+  height: 115px;
   display: flex;
-  flex-direction: row;
-  align-items: center;
   gap: 10px;
 }
 
@@ -62,35 +63,37 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 50px;
   margin-left: 20px;
 }
 
 .line {
-  width: 80px;
-  height: 6px;
+  width: 125px;
+  height: 25px;
   background-color: blue;
   border: 2px solid black;
 }
 
 .circle {
-  height: 60px;
-  width: 60px;
+  height: 115px;
+  width: 115px;
   border-radius: 50%;
   background-color: rgb(0, 128, 128);
   border: 2px solid black;
 }
 
-/**/
+/*Block element*/
 .block {
-  height: 230px;
-  width: 100px;
+  height: 350px;
+  width: 175px;
   border: 2px solid black;
   text-align: center;
-  margin-left: 40px;
+  padding-top: 10px;
+  font-size: xx-large;
+  margin-left: 75px;
 }
 
-/**/
+/*Screen size settings*/
 @media (max-width : 582px) {
   .main-panel {
     grid-template-columns: repeat(1, 1fr);
@@ -98,6 +101,7 @@ body {
 
   .block {
     background-color: rgb(0, 0, 255);
+    margin-top: 20px;
   }
 }
 
@@ -105,7 +109,7 @@ body {
   .main-panel {
     grid-template-columns: repeat(2, 1fr);
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: 325px auto;
   }
 
   .square-panel {
@@ -132,18 +136,18 @@ body {
 @media (min-width:901px) {
   .main-panel {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-columns: 1fr auto 1fr;
+    grid-template-columns: 300px 300px 1fr;
   }
 
   .circle-panel {
-    margin-top: 50px;
-    margin-left: 100px;
+    margin-top: 100px;
+    margin-left: 75px;
   }
 
   .block {
     background-color: rgb(255, 255, 255);
     margin-top: 20px;
     justify-self: end;
-    margin-right: 20px;
+    margin-right: 30px;
   }
 }
